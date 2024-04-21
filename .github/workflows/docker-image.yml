@@ -28,10 +28,12 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t fabiancho93/docker-grahpql:0.0.2 .
+        docker build fabiancho93/docker-grahpql:latest .
     
     - name: Push docker image
       run: |
         docker push fabiancho93/docker-grahpql:0.0.2
+        docker push fabiancho93/docker-grahpql:latest
 
 
         
