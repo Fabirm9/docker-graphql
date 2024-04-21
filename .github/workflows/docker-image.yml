@@ -31,7 +31,7 @@ jobs:
     
     - name: Push docker image
       run: |
-        docker push -t fabiancho93/docker-grahpql:0.0.2 .
+        docker push fabiancho93/docker-grahpql:0.0.2
 
 
         
