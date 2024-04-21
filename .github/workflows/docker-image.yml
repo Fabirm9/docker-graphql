@@ -39,14 +39,14 @@ jobs:
       env: 
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t fabiancho93/docker-grahpql:${{NEW_VERSION}} .
+        docker build -t fabiancho93/docker-grahpql:$NEW_VERSION .
         docker build -t fabiancho93/docker-grahpql:latest .
     
     - name: Push docker image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push fabiancho93/docker-grahpql:${{NEW_VERSION}}
+        docker push fabiancho93/docker-grahpql:$NEW_VERSION
         docker push fabiancho93/docker-grahpql:latest
 
 
